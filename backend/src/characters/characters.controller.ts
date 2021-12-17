@@ -7,8 +7,8 @@ export class CharactersController {
   constructor(private readonly charactersService: CharactersService) {}
 
   @Get()
-  findAll() {
-    return this.charactersService.findAll();
+  async findAll() {
+    return await this.charactersService.findAll();
   }
 
   @Get(':id')
